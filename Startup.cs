@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.SpaServices;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -26,6 +25,8 @@ namespace KhensysCorporationTest
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+          //  services.AddDbContext<ApplicationContext>((options) => options.UseSqlServer(Configuration.GetConnectionString("dbConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
